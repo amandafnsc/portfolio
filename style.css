@@ -307,14 +307,58 @@ header{
         padding: 120px 0px 0px;
     }
 
+    .about-card-title{
+        color: var(--light-color);
+        font-size: 20px;
+        font-weight: 620;
+        letter-spacing: 0.04rem;
+        margin-bottom: 14px;
+    }
+
+    .about-card-content{
+        background-color: var(--light-color);
+        border-radius: 6px;
+        color: var(--darkest-color);
+        font-size: 16px;
+        padding: 20px 32px;
+    }
+
     #projects{
         margin: auto;
         max-width: 1000px;
         padding: 80px 50px 0px;
     }
 
+    .projects-title{
+        color: var(--light-color);
+        border-radius: 20px;
+        background-color: #A48DB2;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 620;
+        letter-spacing: 0.04rem;
+        padding: 8px 70px;
+        text-align: center;
+    }
+
     #contact{
         padding: 80px 50px 0px;
+    }
+
+    .portfolio-link{
+        color: var(--light-color);
+        border-radius: 20px;
+        background-color: var(--blue-color);
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 560;
+        letter-spacing: 0.04rem;
+        padding: 8px 70px;
+        text-align: center;
+    }
+
+    .portfolio-link img {
+        width: 16px;
     }
 
     .obrigada {
