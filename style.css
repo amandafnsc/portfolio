@@ -300,6 +300,23 @@ header{
         display: none; /* Oculta a seção hero no mobile */
     }
 
+    #about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px 0px;
+    }
+
+    #projects{
+        margin: auto;
+        max-width: 1000px;
+        padding: 100px 50px 0px;
+    }
+
+    #contact{
+        padding: 100px 50px 0px;
+    }
+
     .obrigada {
         display: none; /* Oculta o elemento */
     }
