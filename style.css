@@ -293,4 +293,10 @@ header{
     margin: 130px auto 0px;
 }
 
+@media (max-width: 675px) {
+    .obrigada {
+        display: none; /* Oculta o elemento */
+    }
+}
+
 
