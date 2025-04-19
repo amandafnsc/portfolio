@@ -70,7 +70,7 @@ header{
     margin-top: 20px;
 }
 
-.sections, .language{
+.sections{
     border: 2px solid var(--darkest-color);
     border-radius: 34px;
     box-sizing: border-box;
@@ -80,16 +80,12 @@ header{
     padding: 8px;
 }
 
-.sections li a, .language li{
+.sections li a{
     border-radius: 25px;
     color: var(--darkest-color);
     display: flex;
     font-size: 16px;
     padding: 9px 16px;
-}
-
-.pt-br{
-    background-color: var(--lillac-color);
 }
 
 .sections li a:hover{
