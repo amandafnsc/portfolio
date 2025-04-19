@@ -44,8 +44,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 675px) {
-    body::-webkit-scrollbar {
-        display: none; /* Remove a barra de rolagem no mobile */
+    body {
+        -ms-overflow-style: none; /* Remove barra de rolagem no IE e Edge */
+        scrollbar-width: none; /* Remove barra de rolagem no Firefox */
     }
 }
 
@@ -110,13 +111,6 @@ header{
 .amanda-logo{
     padding-top: 28vh;
     width: 560px;
-}
-
-@media (max-width: 680px) {
-    .amanda-logo {
-        height: 240px; /* ou ajuste para o tamanho da versão pequena */
-        padding-top: 32vh; /* também pode ajustar pra ficar proporcional */
-    }
 }
 
 /* stickers */
@@ -197,6 +191,7 @@ header{
     font-weight: 630;
     letter-spacing: 0.04rem;
     padding: 8px 70px;
+    text-align: center;
 }
 
 .projects-list{
@@ -242,7 +237,7 @@ header{
 
 /*contact*/
 #contact{
-    padding: 150px 0px 0px;
+    padding: 150px 50px 0px;
 }
 
 #contact div {
@@ -260,6 +255,7 @@ header{
     font-weight: 580;
     letter-spacing: 0.04rem;
     padding: 8px 70px;
+    text-align: center;
 }
 
 .contact-list{
@@ -300,6 +296,10 @@ header{
 }
 
 @media (max-width: 675px) {
+    .hero {
+        display: none; /* Oculta a seção hero no mobile */
+    }
+
     .obrigada {
         display: none; /* Oculta o elemento */
     }
