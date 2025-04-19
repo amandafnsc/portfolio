@@ -308,11 +308,12 @@ header{
     }
 
     .about-card-title{
+        font-size: 22px;
         font-weight: 620;
     }
 
     .about-card-content{
-        font-size: 16px;
+        font-size: 18px;
     }
 
     #projects{
@@ -322,7 +323,7 @@ header{
     }
 
     .projects-title{
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 620;
     }
 
@@ -331,12 +332,12 @@ header{
     }
 
     .portfolio-link{
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 560;
     }
 
     .portfolio-link img {
-        width: 16px;
+        width: 18px;
     }
 
     .obrigada {
