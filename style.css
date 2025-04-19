@@ -308,19 +308,11 @@ header{
     }
 
     .about-card-title{
-        color: var(--light-color);
-        font-size: 20px;
         font-weight: 620;
-        letter-spacing: 0.04rem;
-        margin-bottom: 14px;
     }
 
     .about-card-content{
-        background-color: var(--light-color);
-        border-radius: 6px;
-        color: var(--darkest-color);
         font-size: 16px;
-        padding: 20px 32px;
     }
 
     #projects{
@@ -330,15 +322,8 @@ header{
     }
 
     .projects-title{
-        color: var(--light-color);
-        border-radius: 20px;
-        background-color: #A48DB2;
-        display: inline-block;
         font-size: 20px;
         font-weight: 620;
-        letter-spacing: 0.04rem;
-        padding: 8px 70px;
-        text-align: center;
     }
 
     #contact{
@@ -346,15 +331,8 @@ header{
     }
 
     .portfolio-link{
-        color: var(--light-color);
-        border-radius: 20px;
-        background-color: var(--blue-color);
-        display: inline-block;
         font-size: 20px;
         font-weight: 560;
-        letter-spacing: 0.04rem;
-        padding: 8px 70px;
-        text-align: center;
     }
 
     .portfolio-link img {
