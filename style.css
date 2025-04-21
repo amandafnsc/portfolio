@@ -146,7 +146,7 @@ header{
 
 .about-card-title{
     color: var(--light-color);
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: 630;
     letter-spacing: 0.04rem;
     margin-bottom: 14px;
@@ -182,7 +182,7 @@ header{
     border-radius: 20px;
     background-color: #A48DB2;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 630;
     letter-spacing: 0.04rem;
     padding: 8px 70px;
@@ -337,6 +337,7 @@ header{
 
     .portfolio-link{
         font-weight: 560;
+        padding: 8px 36px;
     }
 
     .portfolio-link img {
