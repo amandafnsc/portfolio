@@ -168,7 +168,7 @@ header{
 #projects{
     margin: auto;
     max-width: 1000px;
-    padding: 150px 50px 0px;
+    padding: 130px 50px 0px;
 }
 
 #projects div {
@@ -185,7 +185,8 @@ header{
     font-size: 1.3rem;
     font-weight: 630;
     letter-spacing: 0.04rem;
-    padding: 8px 70px;
+    padding: 8px 20px;
+    width: 100vw;
     text-align: center;
 }
 
@@ -328,8 +329,10 @@ header{
 
     .projects-title{
         font-weight: 620;
-        padding: 8px 20px;
-        width: 100vw;
+    }
+
+    .project-kroxe, .project-mind, .project-encantado, .project-ac, .project-asterisco, .project-load{
+        width: 260px;
     }
 
     #contact{
