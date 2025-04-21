@@ -18,6 +18,10 @@
     --light-color: #FBFBFB;
 }
 
+html {
+    font-size: 18px;
+}
+
 body{
     background-image: url(/assets/background-image.png);
     cursor: auto;
@@ -50,19 +54,6 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/*
-#custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-}
-*/
-
 /* header */
 header{
     position: fixed;
@@ -91,8 +82,8 @@ header{
     border-radius: 25px;
     color: var(--darkest-color);
     display: flex;
-    font-size: 18px;
-    padding: 9px 16px;
+    font-size: 1rem;
+    padding: 8px 18px;
 }
 
 .sections li a:hover{
@@ -130,6 +121,10 @@ header{
     transform: rotate(0deg);
 }
 
+.hero-mobile{
+    display: none; /* Oculta a seção hero-mobile no desktop */
+}
+
 /* about section*/
 #about{
     display: flex;
@@ -151,7 +146,7 @@ header{
 
 .about-card-title{
     color: var(--light-color);
-    font-size: 28px;
+    font-size: 1.8rem;
     font-weight: 630;
     letter-spacing: 0.04rem;
     margin-bottom: 14px;
@@ -161,7 +156,7 @@ header{
     background-color: var(--light-color);
     border-radius: 6px;
     color: var(--darkest-color);
-    font-size: 20px;
+    font-size: 1.1rem;
     padding: 20px 32px;
 }
 
@@ -187,7 +182,7 @@ header{
     border-radius: 20px;
     background-color: #A48DB2;
     display: inline-block;
-    font-size: 26px;
+    font-size: 1.5rem;
     font-weight: 630;
     letter-spacing: 0.04rem;
     padding: 8px 70px;
@@ -231,13 +226,17 @@ header{
     cursor: default;
 }
 
+.project-kroxe, .project-mind, .project-encantado, .project-ac, .project-asterisco, .project-load{
+    width: 300px;
+}
+
 .project-kroxe:hover, .project-mind:hover, .project-encantado:hover, .project-ac:hover, .project-asterisco:hover{
     transform: rotate(0deg);
 }
 
 /*contact*/
 #contact{
-    padding: 150px 50px 0px;
+    padding: 150px 50px 150px;
 }
 
 #contact div {
@@ -251,7 +250,7 @@ header{
     border-radius: 20px;
     background-color: var(--blue-color);
     display: inline-block;
-    font-size: 26px;
+    font-size: 1.5rem;
     font-weight: 580;
     letter-spacing: 0.04rem;
     padding: 8px 70px;
@@ -290,30 +289,35 @@ header{
     transform: rotate(0deg);
 }
 
-.obrigada{
-    display: block;
-    margin: 130px auto 0px;
-}
-
 @media (max-width: 675px) {
+    html {
+        font-size: 16px; /* Reduz o tamanho da fonte para dispositivos móveis */
+    }
+
     .hero {
         display: none; /* Oculta a seção hero no mobile */
+    }
+
+    .hero-mobile {
+        display: flex; /* Exibe a seção hero-mobile no mobile */
+        justify-content: center;
+        align-items: center;
+        padding: 120px 60px 0px;
+    }
+
+    .hero-mobile img {
+        width: 100vw;
     }
 
     #about{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 120px 0px 0px;
+        padding: 80px 0px 0px;
     }
 
     .about-card-title{
-        font-size: 22px;
         font-weight: 620;
-    }
-
-    .about-card-content{
-        font-size: 18px;
     }
 
     #projects{
@@ -323,25 +327,20 @@ header{
     }
 
     .projects-title{
-        font-size: 22px;
         font-weight: 620;
+        padding: 8px 22px;
     }
 
     #contact{
-        padding: 80px 50px 0px;
+        padding: 80px 50px 80px;
     }
 
     .portfolio-link{
-        font-size: 22px;
         font-weight: 560;
     }
 
     .portfolio-link img {
         width: 18px;
-    }
-
-    .obrigada {
-        display: none; /* Oculta o elemento */
     }
 }
 
