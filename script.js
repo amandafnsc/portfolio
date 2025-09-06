@@ -5,21 +5,6 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
-document.querySelectorAll('.scroll-button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = button.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
 document.querySelectorAll('.sticker').forEach(sticker => {
     const rect = sticker.getBoundingClientRect();
     sticker.style.left = `${rect.left}px`;

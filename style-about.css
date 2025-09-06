@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    user-select: none;
 }
 
 :root{
@@ -20,6 +19,11 @@
 
 html {
     font-size: 18px;
+}
+
+::selection {
+  background: var(--lillac-color);  /* Cor de fundo da seleção */
+  color: var(--darkest-color);       /* Cor do texto selecionado */
 }
 
 body{
@@ -92,53 +96,12 @@ header{
 }
 
 .menu-selected{
-    background-color: #B1C5DE;
+    background-color: #E3A4A4;
 }
 
-/* playful hero */
-.hero{ 
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 90vh;
-    gap: 100px;
-    padding: 5vh 0px;
-}
-
-.amanda-logo{
-    padding-top: 12vh;
-    width: 560px;
-}
-
-.hero p{
-    color: var(--darkest-color);
-    margin-top: 14px;
-    max-width: 200px;
-    text-align: center;
-    opacity: 0.8;
-    line-height: 1.3rem;
-}
-
-/* stickers */
-.sticker{
-    cursor: grab;
-    position: absolute;
-    transition: transform 0.3s ease;
-    transform: rotate(0deg);
-    z-index: 1;
-}
-
-.sticker:active{
-    cursor: grabbing;
-}
-
-.sticker:hover, .sticker.grabbing{
-    transform: rotate(0deg);
-}
-
-.hero-mobile{
-    display: none; /* Oculta a seção hero-mobile no desktop */
+/*main*/
+main{
+    padding: 140px 50px 0px;
 }
 
 /* about section*/
@@ -154,9 +117,10 @@ header{
     border-radius: 20px;
     display: inline-flex;
     flex-direction: column;
-    margin: 4px 60px 60px;
+    margin: 4px 0px 60px;
     max-width: 490px;
     padding: 14px;
+    transform: rotate(-2deg);
 }
 
 .about-card-title{
@@ -182,27 +146,21 @@ header{
     line-height: 26px;
 }
 
-/*projects*/
-#projects{
-    margin: auto;
-    max-width: 1000px;
-    padding: 110px 50px 0px;
-}
-
-.projects-sketch{
+/*experience section*/
+.exp-sketch{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 6px;
-    padding-right: 80px;
+    padding-right: 70px;
     margin-bottom: 40px;
 }
 
-.projects-sketch img{
+.exp-sketch img{
     width: 80px;
 }
 
-.projects-text{
+.exp-text{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -210,72 +168,94 @@ header{
     color: #433326;
 }
 
-.projects-text h1{
+.exp-text h1{
     font-family: Sansita;
     font-weight: 800;
-    color: #9B82AA;
+    color: #C07F7F;
     font-size: 1.9rem;
     line-height: 2.4rem;
 }
 
-@media (max-width: 762px) {
-    .projects-sketch{
+.exp-text p{
+    max-width: 280px;
+    margin: auto;
+}
+
+@media (max-width: 675px) {
+    .exp-sketch{
         padding-right: 0px;
     }
-    .projects-sketch img{
+    .exp-sketch img{
         display: none;
     }
 }
 
-.projects-list{
+/*experience*/
+#experience{
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--darkest-color);
+    filter: drop-shadow(0 0 10px rgba(67, 51, 38, 0.30));
+}
+
+.info-experience{
+    background-color: var(--bege-color);
+    border-radius: 20px;
+    padding: 0px 0px 0px;
+}
+
+.title-experience{
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px 20px 0 0;
+    background-color: #C07F7F;
+    height: 20px;
+}
+
+.job{
+    border-bottom: 2px dotted var(--darkest-color);
+    padding: 2rem 0px 0;
+    margin: 0 36px 0;
+}
+
+.title-job{
     display: flex;
-    gap: 48px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
 }
 
-.project-kroxe{
-    transform: rotate(3deg); 
-    transition: transform 0.3s ease;
+.title-job h2{
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.project-mind{
-    transform: rotate(-3deg); 
-    transition: transform 0.3s ease;
+.info-experience h3{
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 0.6rem 0;
 }
 
-.project-encantado{
-    transform: rotate(2deg); 
-    transition: transform 0.3s ease;
+.info-experience p{
+    font-size: 1rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
 }
 
-.project-ac{
-    transform: rotate(-2deg); 
-    transition: transform 0.3s ease;
+.barcode{
+    background-color: var(--bege-color);
+    border-radius: 20px;
+    padding: 30px 50px 20px;
 }
 
-.project-asterisco{
-    transform: rotate(1deg); 
-    transition: transform 0.3s ease;
-}
-
-.project-load{
-    transform: rotate(-3deg); 
-    transition: transform 0.3s ease;
-}
-
-.project-kroxe, .project-mind, .project-encantado, .project-ac, .project-asterisco, .project-load{
-    width: 300px;
-}
-
-.project-kroxe:hover, .project-mind:hover, .project-encantado:hover, .project-ac:hover, .project-asterisco:hover, .project-load:hover{
-    transform: rotate(0deg);
+.barcode img{
+    width: 100%;
 }
 
 /*contact*/
 #contact{
-    padding: 150px 50px 50px;
+    padding: 100px 0px 50px;
 }
 
 #contact div {
@@ -336,46 +316,6 @@ header{
         font-size: 16px; /* Reduz o tamanho da fonte para dispositivos móveis */
     }
 
-    .hero {
-        display: none; /* Oculta a seção hero no mobile */
-    }
-
-    .hero-mobile {
-        display: flex; /* Exibe a seção hero-mobile no mobile */
-        justify-content: center;
-        align-items: center;
-        padding: 120px 60px 0px;
-    }
-
-    .hero-mobile img {
-        width: 100vw;
-    }
-
-    #about{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 0px 0px;
-    }
-
-    .about-card-title{
-        font-weight: 620;
-    }
-
-    #projects{
-        margin: auto;
-        max-width: 1000px;
-        padding: 80px 50px 0px;
-    }
-
-    .projects-title{
-        font-weight: 620;
-    }
-
-    .project-kroxe, .project-mind, .project-encantado, .project-ac, .project-asterisco, .project-load{
-        width: 260px;
-    }
-
     #contact{
         padding: 80px 50px 50px;
     }
@@ -388,5 +328,3 @@ header{
         padding-bottom: 80px ;
     }
 }
-
-

@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    user-select: none;
 }
 
 :root{
@@ -20,6 +19,11 @@
 
 html {
     font-size: 18px;
+}
+
+::selection {
+  background: var(--lillac-color);  /* Cor de fundo da seleção */
+  color: var(--darkest-color);       /* Cor do texto selecionado */
 }
 
 body{
@@ -92,101 +96,27 @@ header{
 }
 
 .menu-selected{
-    background-color: #B1C5DE;
-}
-
-/* playful hero */
-.hero{ 
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 90vh;
-    gap: 100px;
-    padding: 5vh 0px;
-}
-
-.amanda-logo{
-    padding-top: 12vh;
-    width: 560px;
-}
-
-.hero p{
-    color: var(--darkest-color);
-    margin-top: 14px;
-    max-width: 200px;
-    text-align: center;
-    opacity: 0.8;
-    line-height: 1.3rem;
-}
-
-/* stickers */
-.sticker{
-    cursor: grab;
-    position: absolute;
-    transition: transform 0.3s ease;
-    transform: rotate(0deg);
-    z-index: 1;
-}
-
-.sticker:active{
-    cursor: grabbing;
-}
-
-.sticker:hover, .sticker.grabbing{
-    transform: rotate(0deg);
-}
-
-.hero-mobile{
-    display: none; /* Oculta a seção hero-mobile no desktop */
-}
-
-/* about section*/
-#about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-card{
-    align-items: center;
-    background-color: #C07F7F;
-    border-radius: 20px;
-    display: inline-flex;
-    flex-direction: column;
-    margin: 4px 60px 60px;
-    max-width: 490px;
-    padding: 14px;
-}
-
-.about-card-title{
-    color: var(--light-color);
-    margin-bottom: 14px;
-}
-
-.about-card-title h1{
-    font-family: Sansita;
-    font-size: 1.7rem;
-    font-weight: 800;
-    letter-spacing: 0.04rem;
-}
-
-.about-card-content{
-    background-color: var(--light-color);
-    border-radius: 6px;
-    color: var(--darkest-color);
-    padding: 20px 32px;
-}
-
-.about-card-content p{
-    line-height: 26px;
+    background-color: var(--lillac-color);
 }
 
 /*projects*/
 #projects{
     margin: auto;
     max-width: 1000px;
-    padding: 110px 50px 0px;
+    padding: 140px 50px 0px;
+}
+
+.projects-title{
+    color: var(--light-color);
+    border-radius: 20px;
+    background-color: #A48DB2;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 630;
+    letter-spacing: 0.04rem;
+    padding: 8px 20px;
+    width: 100vw;
+    text-align: center;
 }
 
 .projects-sketch{
@@ -275,7 +205,7 @@ header{
 
 /*contact*/
 #contact{
-    padding: 150px 50px 50px;
+    padding: 100px 50px 50px;
 }
 
 #contact div {
@@ -336,36 +266,10 @@ header{
         font-size: 16px; /* Reduz o tamanho da fonte para dispositivos móveis */
     }
 
-    .hero {
-        display: none; /* Oculta a seção hero no mobile */
-    }
-
-    .hero-mobile {
-        display: flex; /* Exibe a seção hero-mobile no mobile */
-        justify-content: center;
-        align-items: center;
-        padding: 120px 60px 0px;
-    }
-
-    .hero-mobile img {
-        width: 100vw;
-    }
-
-    #about{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 0px 0px;
-    }
-
-    .about-card-title{
-        font-weight: 620;
-    }
-
     #projects{
         margin: auto;
         max-width: 1000px;
-        padding: 80px 50px 0px;
+        padding: 120px 50px 0px;
     }
 
     .projects-title{
@@ -377,7 +281,7 @@ header{
     }
 
     #contact{
-        padding: 80px 50px 50px;
+        padding: 60px 50px 50px;
     }
 
     .icon-github, .icon-behance, .icon-linkedin, .icon-gmail{
@@ -388,5 +292,3 @@ header{
         padding-bottom: 80px ;
     }
 }
-
-
